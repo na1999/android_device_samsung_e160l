@@ -29,9 +29,9 @@ USE_CAMERA_STUB := true
 -include device/samsung/msm8660-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
--include vendor/samsung/e160l/BoardConfigVendor.mk
+-include vendor/samsung/E160L/BoardConfigVendor.mk
 
-TARGET_BOOTLOADER_BOARD_NAME := e160l
+TARGET_BOOTLOADER_BOARD_NAME := E160L
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := SHV-E160L
@@ -45,7 +45,7 @@ TARGET_KERNEL_CONFIG        := msm8660-perf_defconfig
 TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660-common
 
 # Override bootable/recovery/minui/graphics.c
-BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/e160l/recovery/graphics.c
+BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/E160L/recovery/graphics.c
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10485760

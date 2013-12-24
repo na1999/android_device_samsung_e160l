@@ -20,10 +20,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 PRODUCT_COPY_FILES += device/common/gps/gps.conf_US_SUPL:system/etc/gps.conf
 
 ## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/e160l/e160l-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/E160L/E160L-vendor.mk)
 
 ## overlays
-DEVICE_PACKAGE_OVERLAYS += device/samsung/e160l/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/E160L /overlay
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
@@ -31,22 +31,22 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    device/samsung/e160l/ramdisk/init.qcom.rc:root/init.qcom.rc \
-    device/samsung/e160l/ramdisk/init.qcom.sh:root/init.qcom.sh \
-    device/samsung/e160l/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
-    device/samsung/e160l/ramdisk/init.qcom.usb.sh:root/init.qcom.usb.sh \
-    device/samsung/e160l/ramdisk/init.target.rc:root/init.target.rc \
-    device/samsung/e160l/ramdisk/ueventd.rc:root/ueventd.rc \
-    device/samsung/e160l/ramdisk/init.emmc.rc:root/init.emmc.rc \
-    device/samsung/e160l/fstab.qcom:root/fstab.qcom
+    device/samsung/E160L /ramdisk/init.qcom.rc:root/init.qcom.rc \
+    device/samsung/E160L /ramdisk/init.qcom.sh:root/init.qcom.sh \
+    device/samsung/E160L /ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
+    device/samsung/E160L /ramdisk/init.qcom.usb.sh:root/init.qcom.usb.sh \
+    device/samsung/E160L /ramdisk/init.target.rc:root/init.target.rc \
+    device/samsung/E160L /ramdisk/ueventd.rc:root/ueventd.rc \
+    device/samsung/E160L /ramdisk/init.emmc.rc:root/init.emmc.rc \
+    device/samsung/E160L /fstab.qcom:root/fstab.qcom
 
 # BT firmware
 PRODUCT_COPY_FILES += \
-    device/samsung/e160l/firmware/bcm4330B1.hcd:system/etc/firmware/bcm4330B1.hcd
+    device/samsung/E160L /firmware/bcm4330B1.hcd:system/etc/firmware/bcm4330B1.hcd
 
 # Vold
 PRODUCT_COPY_FILES += \
-    device/samsung/e160l/vold.fstab:system/etc/vold.fstab
+    device/samsung/E160L /vold.fstab:system/etc/vold.fstab
 
 # QRNGD
 PRODUCT_PACKAGES += qrngd

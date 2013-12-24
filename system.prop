@@ -1,3 +1,99 @@
+# system.prop for SHV-E160L
 #
-# system.prop for E160L
+
+rild.libpath=/system/lib/libril-qc-qmi-1.so
+rild.libargs=-d /dev/smd0
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+ril.subscription.types=NV,RUIM
+
+dev.pm.dyn_samplingrate=1
+
+#system props for the MM modules
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-fma2dp=false
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-scan=true
+mmp.enable.3g2=true
+
+ro.vendor.extension_library=/system/lib/libqc-opt.so
+
+lpa.decode=true
+#lpa.decode=false
+lpa.use-stagefright=true
+
 #
+# system props for the data modules
+#
+ro.use_data_netmgrd=true
+
+
+#
+# system props for SD card emulation of emmc partition
+#
+ro.emmc.sdcard.partition=17
+
+#system props for time-services
+persist.timed.enable=true
+
+# System props for audio
+persist.audio.fluence.mode=endfire
+persist.audio.vr.enable=false
+
+
+#
+# system prop for opengles version
+#
+# 131072 is decimal for 0x20000 to report version 2
+ro.opengles.version=131072
+
+#
+# System prop for sending transmit power request to RIL during WiFi hotspot on/off
+#
+ro.ril.transmitpower=true
+
+
+
+ro.sf.lcd_density=320
+
+# Fields for custom RIL
+# MAX PROP NAME is 31 chars --|
+telephony.lteOnCdmaDevice=1
+
+# System property for SIM
+persist.radio.apm_sim_not_pwdn=1
+
+
+# Improve touch responsiveness through Hardware Rendering
+
+debug.sf.hw=1
+debug.composition.type=dyn
+debug.mdpcomp.maxlayer=2
+debug.mdpcomp.logs=0
+dev.pm.dyn_samplingrate=1
+
+# Ril
+ro.ril.hsxpa=1
+ro.ril.gprsclass=10
+#ro.ril.htcmaskw1.bitmask=4294967295
+#ro.ril.htcmaskw1=268449905
+#ro.ril.def.agps.mode=2
+
+# Additional Tweaks
+ro.config.hw_camera_resize=true
+ro.config.dualmic=true
+ro.service.swiqi.supported=true
+persist.service.swiqi.enable=1
+#ro.ril.disable.power.collapse=1
+ro.ril.def.agps.mode=2
+#ro.camera.preview=true
+
